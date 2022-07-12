@@ -1,0 +1,15 @@
+**Log on to codeastro.com for more projects!***
+
+**Database Name: billinginvoice**
+
+**Developed by Anthony Joboy**
+
+**Recommended PHP Version 5.6 or Newer**
+
+
+**Login Details**
+
+Username: user
+Password: password
+
+
