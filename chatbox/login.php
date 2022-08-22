@@ -75,7 +75,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top" style="background:">
   			<div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand"><b><i class="glyphicon glyphicon-lock"></i> Chat Box</b></a></li>
+                    <a class="navbar-brand" href="login.php"><b><i class="glyphicon glyphicon-lock"></i> Chat Box</b></a></li>
                 </div>
             </div>
 	  	</nav>	

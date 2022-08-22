@@ -25,6 +25,7 @@
         <a class="navbar-brand" href="signin.php">Login</a>
         <a class="navbar-brand" href="register.php">Register Service Provider</a>
         <a class="navbar-brand" href="sign.php"><strong><i class="glyphicon glyphicon-list-alt "></i> Chat Box - Main Menu</strong></a>
+       
         <a class="navbar-brand" href="about.php">About</a>
 
         <?php elseif ($_SESSION['user']->name == 'admin'): ?>

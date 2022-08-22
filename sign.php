@@ -59,7 +59,7 @@ footer{
                         </div>
                         <div class="panel-body" style="margin-top:-30px;">
                            <center>
-                                  <a class="btn btn-success" style="padding:15px 20px;" href="chatbox/"><i class="glyphicon glyphicon-log-in"></i>  Visit</a>
+                                  <a class="btn btn-success" style="padding:15px 20px;" href="chatbox/login.php"><i class="glyphicon glyphicon-log-in"></i>  Visit</a>
                          </center>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ footer{
                         </div>
                         <div class="panel-body" style="margin-top:-30px;">
                            <center>
-                               <a class="btn btn-success" style="padding:15px 20px;" href="chatbox/admin/"><i class="glyphicon glyphicon-log-in"></i>  Visit</a>
+                               <a class="btn btn-success" style="padding:15px 20px;" href="chatbox/admin/login.php"><i class="glyphicon glyphicon-log-in"></i>  Visit</a>
                             </center>
                         </div>
                     </div>
