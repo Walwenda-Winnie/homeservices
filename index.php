@@ -65,6 +65,7 @@
 <?php  
  session_start();  
  include ('db_config.php');
+
  try  
  {  
       if(isset($_POST["login"]))  

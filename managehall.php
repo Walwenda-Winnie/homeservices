@@ -1,6 +1,6 @@
 <?php
     include_once "scripts/checklogin.php";
-    include_once "simple-billing/include/header.php";
+    include_once "./include/header.php";
     include_once "scripts/DB.php";
 
     if (!check("admin")) {
@@ -56,4 +56,4 @@
     </div>
 </div>
 
-<?php include_once "include/footer.php";
+<?php include_once "./include/footer.php";

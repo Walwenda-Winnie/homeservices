@@ -1,6 +1,7 @@
 <?php
   
   include('db_config.php');
+  include_once "./include/header.php";
 
   session_start();  
   if(isset($_SESSION["username"]))  
@@ -62,14 +63,14 @@ try{
 
         $statement = $connect->prepare("
           INSERT INTO inv_order_item 
-          (order_id, item_name, order_item_quantity, order_item_price, order_item_actual_amount, order_item_tax1_rate, order_item_tax1_amount, order_item_tax2_rate, order_item_tax2_amount, order_item_tax3_rate, order_item_tax3_amount, order_item_final_amount)
-          VALUES (:order_id, :item_name, :order_item_quantity, :order_item_price, :order_item_actual_amount, :order_item_tax1_rate, :order_item_tax1_amount, :order_item_tax2_rate, :order_item_tax2_amount, :order_item_tax3_rate, :order_item_tax3_amount, :order_item_final_amount)
+          (order_id, service_name, order_item_quantity, order_item_price, order_item_actual_amount, order_item_tax1_rate, order_item_tax1_amount, order_item_tax2_rate, order_item_tax2_amount, order_item_tax3_rate, order_item_tax3_amount, order_item_final_amount)
+          VALUES (:order_id, :service_name, :order_item_quantity, :order_item_price, :order_item_actual_amount, :order_item_tax1_rate, :order_item_tax1_amount, :order_item_tax2_rate, :order_item_tax2_amount, :order_item_tax3_rate, :order_item_tax3_amount, :order_item_final_amount)
         ");
 
         $statement->execute(
           array(
             ':order_id'               =>  $order_id,
-            ':item_name'              =>  trim($_POST["item_name"][$count]),
+            ':service_name'              =>  trim($_POST["service_name"][$count]),
             ':order_item_quantity'          =>  trim($_POST["order_item_quantity"][$count]),
             ':order_item_price'           =>  trim($_POST["order_item_price"][$count]),
             ':order_item_actual_amount'       =>  trim($_POST["order_item_actual_amount"][$count]),
@@ -144,13 +145,13 @@ try{
         $order_total_after_tax = $order_total_after_tax + floatval(trim($_POST["order_item_final_amount"][$count]));
         $statement = $connect->prepare("
           INSERT INTO inv_order_item 
-          (order_id, item_name, order_item_quantity, order_item_price, order_item_actual_amount, order_item_tax1_rate, order_item_tax1_amount, order_item_tax2_rate, order_item_tax2_amount, order_item_tax3_rate, order_item_tax3_amount, order_item_final_amount) 
-          VALUES (:order_id, :item_name, :order_item_quantity, :order_item_price, :order_item_actual_amount, :order_item_tax1_rate, :order_item_tax1_amount, :order_item_tax2_rate, :order_item_tax2_amount, :order_item_tax3_rate, :order_item_tax3_amount, :order_item_final_amount)
+          (order_id, service_name, order_item_quantity, order_item_price, order_item_actual_amount, order_item_tax1_rate, order_item_tax1_amount, order_item_tax2_rate, order_item_tax2_amount, order_item_tax3_rate, order_item_tax3_amount, order_item_final_amount) 
+          VALUES (:order_id, :service_name, :order_item_quantity, :order_item_price, :order_item_actual_amount, :order_item_tax1_rate, :order_item_tax1_amount, :order_item_tax2_rate, :order_item_tax2_amount, :order_item_tax3_rate, :order_item_tax3_amount, :order_item_final_amount)
         ");
         $statement->execute(
           array(
             ':order_id'                 =>  $order_id,
-            ':item_name'                =>  trim($_POST["item_name"][$count]),
+            ':service_name'                =>  trim($_POST["service_name"][$count]),
             ':order_item_quantity'          =>  trim($_POST["order_item_quantity"][$count]),
             ':order_item_price'            =>  trim($_POST["order_item_price"][$count]),
             ':order_item_actual_amount'     =>  trim($_POST["order_item_actual_amount"][$count]),
@@ -259,6 +260,7 @@ try{
           <div class="container-fluid">
             <div class="navbar-header" >
               <a class=" navbar-brand" href="invoice.php?add=1">Billing System</a>
+              
             </div>
           </div>
         </nav>
@@ -292,7 +294,7 @@ try{
                   <table id="invoice-item-table" class="table table-bordered table-hover table-striped">
                     <tr>
                       <th width="5%">S/N.</th>
-                      <th width="20%">Item Name</th>
+                      <th width="20%">Service Name</th>
                       <th width="10%">Quantity</th>
                       <th width="10%">Price($)</th>
                       <th width="10%">Actual Amt.</th>
@@ -317,7 +319,7 @@ try{
                     </tr>
                     <tr>
                       <td><span id="sr_no">1</span></td>
-                      <td><input type="text" name="item_name[]" id="item_name1" class="form-control input-sm" /></td>
+                      <td><input type="text" name="service_name[]" id="service_name1" class="form-control input-sm" /></td>
                       <td><input type="text" name="order_item_quantity[]" id="order_item_quantity1" data-srno="1" class="form-control input-sm order_item_quantity" /></td>
                       <td><input type="text" name="order_item_price[]" id="order_item_price1" data-srno="1" class="form-control input-sm number_only order_item_price" /></td>
                       <td><input type="text" name="order_item_actual_amount[]" id="order_item_actual_amount1" data-srno="1" class="form-control input-sm order_item_actual_amount" readonly /></td>
@@ -364,7 +366,7 @@ try{
           html_code += '<tr id="row_id_'+count+'">';
           html_code += '<td><span id="sr_no">'+count+'</span></td>';
           
-          html_code += '<td><input type="text" name="item_name[]" id="item_name'+count+'" class="form-control input-sm" /></td>';
+          html_code += '<td><input type="text" name="service_name[]" id="service_name'+count+'" class="form-control input-sm" /></td>';
           
           html_code += '<td><input type="text" name="order_item_quantity[]" id="order_item_quantity'+count+'" data-srno="'+count+'" class="form-control input-sm number_only order_item_quantity" /></td>';
           html_code += '<td><input type="text" name="order_item_price[]" id="order_item_price'+count+'" data-srno="'+count+'" class="form-control input-sm number_only order_item_price" /></td>';
@@ -480,10 +482,10 @@ try{
 
           for(var no=1; no<=count; no++)
           {
-            if($.trim($('#item_name'+no).val()).length == 0)
+            if($.trim($('#service_name'+no).val()).length == 0)
             {
-              alert("Please Enter Item Name");
-              $('#item_name'+no).focus();
+              alert("Please Enter Service Name");
+              $('#service_name'+no).focus();
               return false;
             }
 
@@ -572,7 +574,7 @@ try{
                   <table id="invoice-item-table" class="table table-bordered table-hover table-striped">
                     <tr>
                       <th width="5%">S/N</th>
-                      <th width="20%">Item Name</th>
+                      <th width="20%">Service Name</th>
                       <th width="10%">Quantity</th>
                       <th width="10%">Price($)</th>
                       <th width="10%">Actual Amt.</th>
@@ -613,7 +615,7 @@ try{
                     ?>
                     <tr>
                       <td><span id="sr_no"><?php echo $m; ?></span></td>
-                      <td><input type="text" name="item_name[]" id="item_name<?php echo $m; ?>" class="form-control input-sm" value="<?php echo $sub_row["item_name"]; ?>" /></td>
+                      <td><input type="text" name="service_name[]" id="service_name<?php echo $m; ?>" class="form-control input-sm" value="<?php echo $sub_row["service_name"]; ?>" /></td>
                       <td><input type="text" name="order_item_quantity[]" id="order_item_quantity<?php echo $m; ?>" data-srno="<?php echo $m; ?>" class="form-control input-sm order_item_quantity" value = "<?php echo $sub_row["order_item_quantity"]; ?>"/></td>
                       <td><input type="text" name="order_item_price[]" id="order_item_price<?php echo $m; ?>" data-srno="<?php echo $m; ?>" class="form-control input-sm number_only order_item_price" value="<?php echo $sub_row["order_item_price"]; ?>" /></td>
                       <td><input type="text" name="order_item_actual_amount[]" id="order_item_actual_amount<?php echo $m; ?>" data-srno="<?php echo $m; ?>" class="form-control input-sm order_item_actual_amount" value="<?php echo $sub_row["order_item_actual_amount"];?>" readonly /></td>
@@ -661,7 +663,7 @@ try{
           html_code += '<tr id="row_id_'+count+'">';
           html_code += '<td><span id="sr_no">'+count+'</span></td>';
           
-          html_code += '<td><input type="text" name="item_name[]" id="item_name'+count+'" class="form-control input-sm" /></td>';
+          html_code += '<td><input type="text" name="service_name[]" id="service_name'+count+'" class="form-control input-sm" /></td>';
           
           html_code += '<td><input type="text" name="order_item_quantity[]" id="order_item_quantity'+count+'" data-srno="'+count+'" class="form-control input-sm number_only order_item_quantity" /></td>';
           html_code += '<td><input type="text" name="order_item_price[]" id="order_item_price'+count+'" data-srno="'+count+'" class="form-control input-sm number_only order_item_price" /></td>';
@@ -777,10 +779,10 @@ try{
 
           for(var no=1; no<=count; no++)
           {
-            if($.trim($('#item_name'+no).val()).length == 0)
+            if($.trim($('#service_name'+no).val()).length == 0)
             {
-              alert("Please Enter Item Name");
-              $('#item_name'+no).focus();
+              alert("Please Enter Service Name");
+              $('#service_name'+no).focus();
               return false;
             }
 
@@ -833,10 +835,7 @@ try{
       <div class="container">
         <div class="navbar-header">
          
-        
-        <a class="navbar-brand" href="managehall.php">Manage Providers</a>
-        <a class="navbar-brand" href="admin.php">Manage Booking</a>
-        <a class="navbar-brand" href="#">Billing System</a>
+        <a class="navbar-brand" href="invoice.php">Billing System</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">

@@ -61,7 +61,7 @@ INSERT INTO `inv_order` (`order_id`, `order_no`, `order_date`, `order_receiver_n
 CREATE TABLE `inv_order_item` (
   `order_item_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
-  `item_name` varchar(250) NOT NULL,
+  `service_name` varchar(250) NOT NULL,
   `order_item_quantity` decimal(10,0) NOT NULL,
   `order_item_price` decimal(10,0) NOT NULL,
   `order_item_actual_amount` decimal(10,0) NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE `inv_order_item` (
 -- Dumping data for table `inv_order_item`
 --
 
-INSERT INTO `inv_order_item` (`order_item_id`, `order_id`, `item_name`, `order_item_quantity`, `order_item_price`, `order_item_actual_amount`, `order_item_tax1_rate`, `order_item_tax1_amount`, `order_item_tax2_rate`, `order_item_tax2_amount`, `order_item_tax3_rate`, `order_item_tax3_amount`, `order_item_final_amount`) VALUES
+INSERT INTO `inv_order_item` (`order_item_id`, `order_id`, `service_name`, `order_item_quantity`, `order_item_price`, `order_item_actual_amount`, `order_item_tax1_rate`, `order_item_tax1_amount`, `order_item_tax2_rate`, `order_item_tax2_amount`, `order_item_tax3_rate`, `order_item_tax3_amount`, `order_item_final_amount`) VALUES
 (17, 13, 'Product Four', '9', '28', '252', '2', '5', '3', '8', '3', '8', '272'),
 (16, 13, 'Product Three', '20', '10', '200', '1', '2', '1', '2', '1', '2', '206'),
 (14, 13, 'Product One', '16', '14', '224', '2', '4', '1', '2', '0', '0', '231'),

@@ -1,6 +1,6 @@
 <?php
 
-include_once "simple-billing/include/header.php";
+include_once "./include/header.php";
 include_once "./scripts/DB.php";
 
 if (!isset($_GET['provider'])) {

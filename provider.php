@@ -1,6 +1,6 @@
 <?php
 include_once "scripts/checklogin.php";
-include_once "include/header.php";
+include_once "./include/header.php";
 
 if (!check()) {
     header('Location: signout.php');

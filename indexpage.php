@@ -1,6 +1,6 @@
 <?php
 
-include_once "simple-billing/include/header.php";
+include_once "./include/header.php";
 $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "Anjangaon", "Arvi", "Aurangabad", "Bhiwandi", "Dhule", "Kalyan-Dombivali", "Ichalkaranji", "Kalyan-Dombivali", "Karjat", "Latur", "Loha", "Lonar", "Lonavla", "Mahad", "Malegaon", "Malkapur", "Mangalvedhe", "Mangrulpir", "Manjlegaon", "Manmad", "Manwath", "Mehkar", "Mhaswad", "Mira-Bhayandar", "Morshi", "Mukhed", "Mul", "Greater Mumbai*", "Murtijapur", "Nagpur", "Nanded-Waghala", "Nandgaon", "Nandura", "Nandurbar", "Narkhed", "Nashik", "Navi Mumbai", "Nawapur", "Nilanga", "Osmanabad", "Ozar", "Pachora", "Paithan", "Palghar", "Pandharkaoda", "Pandharpur", "Panvel", "Parbhani", "Parli", "Partur", "Pathardi", "Pathri", "Patur", "Pauni", "Pen", "Phaltan", "Pulgaon", "Pune", "Purna", "Pusad", "Rahuri", "Rajura", "Ramtek", "Ratnagiri", "Raver", "Risod", "Sailu", "Sangamner", "Sangli", "Sangole", "Sasvad", "Satana", "Satara", "Savner", "Sawantwadi", "Shahade", "Shegaon", "Shendurjana", "Shirdi", "Shirpur-Warwade", "Shirur", "Shrigonda", "Shrirampur", "Sillod", "Sinnar", "Solapur", "Soyagaon", "Talegaon Dabhade", "Talode", "Tasgaon", "Thane", "Tirora", "Tuljapur", "Tumsar", "Uchgaon", "Udgir", "Umarga", "Umarkhed", "Umred", "Uran", "Uran Islampur", "Vadgaon Kasba", "Vaijapur", "Vasai-Virar", "Vita", "Wadgaon Road", "Wai", "Wani", "Wardha", "Warora", "Warud", "Washim", "Yavatmal", "Yawal", "Yevla"];
 
 ?>
@@ -23,12 +23,14 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
         </div>
 
         <div class="form-group col-5">
-            <label for="">Who's Required</label>
+            <label for="">Profession Required</label>
             <select class="form-control" name="profession" id="profession">
                 <option value="none">Select Profession</option>
                 <option value="electrician">Electrician</option>
+                <option value="mobile">Carpentry</option>
                 <option value="plumber">Plumber</option>
-                <option value="mobile">Mobile Repairer</option>
+                <option value="mobile">Repairer</option>
+                <option value="mobile">Laundry</option>
             </select>
         </div>
 
@@ -39,8 +41,10 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
     </div>
 
     <div class="table-responsive">
-        <table id="providers" class="table">
-            <thead>
+        <table id="providers" class="table" >
+
+
+            <thead background-image: url('example_img_girl.jpg');>
                 <tr>
                     <th>Photo</th>
                     <th>Name</th>

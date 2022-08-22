@@ -1,7 +1,7 @@
 <?php
     include_once "scripts/checklogin.php";
     include_once "scripts/DB.php";
-    include_once "include/header.php";
+    include_once "./include/header.php";
 
     if (!check("admin")) {
         header('Location: signout.php');

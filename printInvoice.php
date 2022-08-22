@@ -40,7 +40,7 @@ if(isset($_GET["pdf"]) && isset($_GET["id"]))
       <table width="100%" border="1" cellpadding="5" cellspacing="0">
        <tr>
         <th>S/N</th>
-        <th>Item Name</th>
+        <th>Service Name</th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Actual Amount</th>
@@ -76,7 +76,7 @@ if(isset($_GET["pdf"]) && isset($_GET["id"]))
    $output .= '
    <tr>
     <td>'.$count.'</td>
-    <td>'.$sub_row["item_name"].'</td>
+    <td>'.$sub_row["service_name"].'</td>
     <td>'.$sub_row["order_item_quantity"].'</td>
     <td>'.$sub_row["order_item_price"].'</td>
     <td>'.$sub_row["order_item_actual_amount"].'</td>

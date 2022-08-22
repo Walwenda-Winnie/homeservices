@@ -1,4 +1,4 @@
-<?php include_once "simple-billing/include/header.php"; ?>
+<?php include_once "./include/header.php"; ?>
 
 <div class="container">
     <div class="row">

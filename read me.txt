@@ -1,0 +1,23 @@
+<!----------------------------------
+	===============================
+		[ Database Uploading ]
+	===============================
+------------------------------------>
+
+	Please Open the BD folder in the Extracted Project.
+
+	Then Create a db name in Phpmyadmin (imp : just like sql file name).
+
+	Then import the sql file in the created database in phpmyadmin.
+
+<!----------------------------------
+	===============================
+		[ Admin Panel ]
+	===============================
+------------------------------------>
+	
+	The Default Adminpanel Password and Username is as follow
+	Username : Admin
+	Where Email use : admin@gmail.com
+	Password : Admin
+	After loged in manage complete web application

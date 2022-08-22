@@ -13,7 +13,7 @@ include_once "./msg/signin.php";
             </div>
             <hr>
 
-            <form action="scripts/sign.php" method="post">
+            <form action="scripts/signin.php" method="post">
                 <div class="form-group">
                     <label for="">Contact No.</label>
                     <input id="contact"
