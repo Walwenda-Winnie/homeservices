@@ -7,6 +7,8 @@ if(!$_SESSION['email'])
 header('location:login.php');
 }else{
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -115,6 +117,7 @@ header('location:login.php');
                       }
                       else{  
                     ?>
+                    
                     <h1 class="page-header">Website Dashboard</h1>
                     <h3>Welcome ! <?php echo ucwords($admin); ?> </h3>
                     <hr/>

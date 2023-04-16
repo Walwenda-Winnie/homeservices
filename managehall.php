@@ -14,6 +14,14 @@
 
     include_once "msg/managehall.php";
 ?>
+
+<style>
+         body {
+            background-image: url("images/download (17).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+      </style>
 <div class="container" style="margin-top: 30px; margin-bottom: 60px;">
     <div class="table-responsive">
         <table class="table">

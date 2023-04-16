@@ -21,7 +21,7 @@ if (isset($_POST['book'])) {
     ]);
 
     if ($isBooked) {
-        header("Location: ../booking.php?provider=$provider&msg=success");
+        header("Location: ../login.php?provider=$provider&msg=success");
         exit();
     } else {
         header("Location: ../booking.php?provider=$provider&msg=failed");

@@ -29,6 +29,7 @@ CREATE TABLE bookings
 );
 
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -59,24 +60,24 @@ INSERT INTO `inv_order` (`order_id`, `order_no`, `order_date`, `order_receiver_n
 (11, '102566', '2021-07-01', 'Agustin A Anderson', '174 Asylum Avenue', '150', '2', '2', '1', '5', 155, 1625590293);
 
 
-CREATE TABLE `inv_order_item` (
-  `order_item_id` int(11) NOT NULL,
+CREATE TABLE `inv_order_service` (
+  `order_service_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `service_name` varchar(250) NOT NULL,
-  `order_item_quantity` decimal(10,0) NOT NULL,
-  `order_item_price` decimal(10,0) NOT NULL,
-  `order_item_actual_amount` decimal(10,0) NOT NULL,
-  `order_item_tax1_rate` decimal(10,0) NOT NULL,
-  `order_item_tax1_amount` decimal(10,0) NOT NULL,
-  `order_item_tax2_rate` decimal(10,0) NOT NULL,
-  `order_item_tax2_amount` decimal(10,0) NOT NULL,
-  `order_item_tax3_rate` decimal(10,0) NOT NULL,
-  `order_item_tax3_amount` decimal(10,0) NOT NULL,
-  `order_item_final_amount` decimal(10,0) NOT NULL
+  `order_service_quantity` decimal(10,0) NOT NULL,
+  `order_service_price` decimal(10,0) NOT NULL,
+  `order_service_actual_amount` decimal(10,0) NOT NULL,
+  `order_service_tax1_rate` decimal(10,0) NOT NULL,
+  `order_service_tax1_amount` decimal(10,0) NOT NULL,
+  `order_service_tax2_rate` decimal(10,0) NOT NULL,
+  `order_service_tax2_amount` decimal(10,0) NOT NULL,
+  `order_service_tax3_rate` decimal(10,0) NOT NULL,
+  `order_service_tax3_amount` decimal(10,0) NOT NULL,
+  `order_service_final_amount` decimal(10,0) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `inv_order_item` (`order_item_id`, `order_id`, `service_name`, `order_item_quantity`, `order_item_price`, `order_item_actual_amount`, `order_item_tax1_rate`, `order_item_tax1_amount`, `order_item_tax2_rate`, `order_item_tax2_amount`, `order_item_tax3_rate`, `order_item_tax3_amount`, `order_item_final_amount`) VALUES
+INSERT INTO `inv_order_service` (`order_service_id`, `order_id`, `service_name`, `order_service_quantity`, `order_service_price`, `order_service_actual_amount`, `order_service_tax1_rate`, `order_service_tax1_amount`, `order_service_tax2_rate`, `order_service_tax2_amount`, `order_service_tax3_rate`, `order_service_tax3_amount`, `order_service_final_amount`) VALUES
 (17, 13, 'Product Four', '9', '28', '252', '2', '5', '3', '8', '3', '8', '272'),
 (16, 13, 'Product Three', '20', '10', '200', '1', '2', '1', '2', '1', '2', '206'),
 (14, 13, 'Product One', '16', '14', '224', '2', '4', '1', '2', '0', '0', '231'),
@@ -103,8 +104,8 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 ALTER TABLE `inv_order`
   ADD PRIMARY KEY (`order_id`);
 
-ALTER TABLE `inv_order_item`
-  ADD PRIMARY KEY (`order_item_id`);
+ALTER TABLE `inv_order_service`
+  ADD PRIMARY KEY (`order_service_id`);
 
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
@@ -112,10 +113,17 @@ ALTER TABLE `login`
 ALTER TABLE `inv_order`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
-ALTER TABLE `inv_order_item`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `inv_order_service`
+  MODIFY `order_service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+  CREATE TABLE IF NOT EXISTS `images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` longblob NOT NULL,
+  `created` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 

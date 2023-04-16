@@ -26,6 +26,11 @@
             body{
 			font-family: "gotham-pro";
 			direction: ltr;
+            background-image: url("images/431784812.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            <style>
+        
             }
 footer{
     color: #fff;
@@ -36,13 +41,98 @@ footer{
             .panel-body{
                 padding-bottom: 10px;
             }
+
+            
+    
+        nav a.nav-link {
+            color: white !important;
+        }
+        
+         body {
+            background-color: white;
+         }
+         
+    a{
+      text-indent: 1.0cm;
+    }
+    body {
+  font-family: Helvetica;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.site-header { 
+  border-bottom: 2px solid white;
+  padding: .5em 1em;
+}
+
+.site-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site-identity {
+  float: left;
+}
+
+.site-identity h1 {
+  font-size: 1.5em;
+  margin: .7em 0 .3em 0;
+  display: inline-block;
+}
+
+.site-identity img {
+  max-width: 40px;
+  float: top left;
+  margin: 0 0px 0 0;
+}
+
+.site-navigation {
+  float: right;
+}
+
+.site-navigation ul, li {
+  margin: 0; 
+  padding: 0;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.0em 1em 1em 1em;
+}
+  
+      
         </style>
     </head>
-	<body style="background: #ccc;">
-		<nav class="navbar navbar-default navbar-fixed-top" style="background:">
-			<div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand"><strong><i class="glyphicon glyphicon-list-alt "></i> Chat Box - Main Menu</strong></a>
+	<body style="background-color:white;">
+<div class="site-identity">
+    <a href="#"><img src="images/images.png" alt="Home Services" /></a>
+  </div>  
+    <nav class="nav bg-white">
+        <?php if (!isset($_SESSION['user'])): ?>
+            
+          <a class="navbar-brand active" href="slider.php" ><font color="white">Home</font color></a>
+            <a class="navbar-brand" href="about.php"><font color="white">About us</font color></a>
+            <a class="navbar-brand" href="register.php"><font color="white">Register as service provider</font color></a>
+            <a class="navbar-brand" href="signin.php"><font color="white">Login</font color></a>
+            <a class="navbar-brand active" href="indexpage.php" ><font color="white"> Find Service provider</font color></a>
+        <a class="navbar-brand" href="sign.php"><i class="glyphicon glyphicon-list-alt "></i><font color="white"> Chatbot</font color></a>
+        <a class="navbar-brand" href="last.html"><font color="white">Contact Us</font color></a>
+        
+
+        <?php elseif ($_SESSION['user']->name == 'admin'): ?>
+        <a class="navbar-brand" href="managehall.php"><font color="white">Manage providers</font color></a>
+        <a class="navbar-brand" href="admin.php"><font color="white">Manage booking</font color></a>
+        <a class="nav-brand" href="admin/login.php"><font color="white">Manage transactions<font color></a>
+        <a class="navbar-brand" href="upload.html"><font color="white">Upload website images</font color></a>
+        <a class="nav-brand" href="signout.php"><font color="white">Log Out</font color></a>
+        <?php endif; ?>
+
+    </nav>
+        </body>
                 </div>
 			</div>
 		</nav>	
@@ -82,9 +172,9 @@ footer{
 			</div>
 		</div>
 		<!-- Main div end -->
-		<footer class="container-fluid" style="background:#444; color:#fff;">
-            <p align="center">Copyright &copy; 2022</p>
-            <p align="center">HOME SERVICES</p>
+		<footer 
+        style="border-top: 1px solid #333;width: 100%; position: fixed; bottom: 0px;text-align: center;height: 40px; line-height: 40px; background: white; ">
+    <font color="black"><strong> Home Based Service Provider &copy; <?= date("Y") ?></strong>
         </footer>
 		<!-- footer end-->
 	</body>

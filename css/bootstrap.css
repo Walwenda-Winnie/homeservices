@@ -43,7 +43,7 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color:blue;
 }
 a:active,
 a:hover {
@@ -192,9 +192,9 @@ th {
   *,
   *:before,
   *:after {
-    color: #000 !important;
+    color: blue!important;
     text-shadow: none !important;
-    background: transparent !important;
+    background: blue !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
   }

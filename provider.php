@@ -9,8 +9,15 @@ if (!check()) {
 
 $provider = $_SESSION['user'];
 
-$cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "Anjangaon", "Arvi", "Aurangabad", "Bhiwandi", "Dhule", "Kalyan-Dombivali", "Ichalkaranji", "Kalyan-Dombivali", "Karjat", "Latur", "Loha", "Lonar", "Lonavla", "Mahad", "Malegaon", "Malkapur", "Mangalvedhe", "Mangrulpir", "Manjlegaon", "Manmad", "Manwath", "Mehkar", "Mhaswad", "Mira-Bhayandar", "Morshi", "Mukhed", "Mul", "Greater Mumbai*", "Murtijapur", "Nagpur", "Nanded-Waghala", "Nandgaon", "Nandura", "Nandurbar", "Narkhed", "Nashik", "Navi Mumbai", "Nawapur", "Nilanga", "Osmanabad", "Ozar", "Pachora", "Paithan", "Palghar", "Pandharkaoda", "Pandharpur", "Panvel", "Parbhani", "Parli", "Partur", "Pathardi", "Pathri", "Patur", "Pauni", "Pen", "Phaltan", "Pulgaon", "Pune", "Purna", "Pusad", "Rahuri", "Rajura", "Ramtek", "Ratnagiri", "Raver", "Risod", "Sailu", "Sangamner", "Sangli", "Sangole", "Sasvad", "Satana", "Satara", "Savner", "Sawantwadi", "Shahade", "Shegaon", "Shendurjana", "Shirdi", "Shirpur-Warwade", "Shirur", "Shrigonda", "Shrirampur", "Sillod", "Sinnar", "Solapur", "Soyagaon", "Talegaon Dabhade", "Talode", "Tasgaon", "Thane", "Tirora", "Tuljapur", "Tumsar", "Uchgaon", "Udgir", "Umarga", "Umarkhed", "Umred", "Uran", "Uran Islampur", "Vadgaon Kasba", "Vaijapur", "Vasai-Virar", "Vita", "Wadgaon Road", "Wai", "Wani", "Wardha", "Warora", "Warud", "Washim", "Yavatmal", "Yawal", "Yevla"];
+$cities = [	"Ntulili", "Kibiru", "Lachathuriu", "Kuani", "Matiru", "Kandebene",	"Mweronkanga", 
+"Limbine", "MAANTHI", "Karii", "Mwili", "Kaliati", "Ntiba", "Kitheo", "Mucuune", "Twale",
+"Kiorimba", "Machegene", "Kieru", "Kibuline", "Kimirii", "Mbeu",
+"Kunene", "Limauru", "Kilenchune", "Ntombo", "Kamaroo", "Amwari",
+"Kiandiu", "Ithamare", "Miathene", "Kianjai", "Mutionjuri", "Machaku", "Nairiri", 
+"Mituntu", "Kalithiria", "Urru", "Thau", "Muthiru", "Lairangi", "Mumui", "Rei"];
 ?>
+
+
 <div class="container" style="margin-top: 30px; margin-bottom: 60px;">
     <div class="card">
         <div class="card-body">
@@ -91,9 +98,15 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
                 <div class="form-group">
                     <label for="">Profession</label>
                     <select class="form-control" name="profession" id="profession">
-                        <option value="electrician">Electrician</option>
+                    <option value="electrician">Electrician</option>
                         <option value="plumber">Plumber</option>
-                        <option value="mobile">Mobile Repairer</option>
+                        <option value="handymanservices">Handyman Services</option>
+                        <option value="housecleaning">House Cleaner</option>
+                        <option value="gardenservices">Garden Services</option>
+                        <option value="interiordecorator">Interior Decorator</option>
+                          <option value="homeinspectionservices">Home Inspection Services</option>
+                          <option value="personalorganizer">Personal Organizer</option>
+                          <option value="personaldriver">Personal Driver</option>
                     </select>
                 </div>
 

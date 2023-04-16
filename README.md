@@ -5,7 +5,7 @@
 This is sample Home Service booking project. I created this project while
 learning. Created with PHP(Without any Frameworks). You basically register
 service providers and then can manage bookings or those providers through admin
-login.
+login.It has the chat bot interface and payment interface. It also has a google map.
 
 ## License & Copyrights
 You can fully copy or redistribute any part including assets, no License or
@@ -25,20 +25,13 @@ This Project uses MIT license.
   - Password  : admin123
 - Providers:
     - No Providers are registered by default use register screen to create
-      some.
-
-#### NOTE
-This project is not meant to be used in production. If you want to use it in
-real scenario either go over code to remove any security flaws like I stored
-passwords in plain text which is not recommended. Although PDO drivers with
-parameterised query is used there is no guarntee of full hackerproof safety.
+      some
 
 
 ## Want production ready version?
 Currently I would not suggest you to use this for anything rather than study or
 for really small scale business. But if you want full featured Application you
-can hire me thorugh my email(v at kubre dot in) or
-[website](https://kubre.in).
+can hire me thorugh my email(walwendawinnie@gmail.com) 
 
 ## Features
 - Search for professionals for plumbing, mobile repaires, etc. in your city.

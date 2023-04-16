@@ -3,6 +3,7 @@ include_once "session.php";
 include_once "checklogin.php";
 include_once "DB.php";
 include_once "helpers.php";
+ include_once "./msg/updatehall.php"; 
 
 if (!check()) {
     header('Location: logout.php');
@@ -44,5 +45,6 @@ if (isset($_POST['register'])) {
         echo "";
         header('Location: ../logout.php');
         exit();
+        
     }
 }

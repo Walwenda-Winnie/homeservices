@@ -1,20 +1,35 @@
 <?php
 
 include_once "./include/header.php";
-$cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "Anjangaon", "Arvi", "Aurangabad", "Bhiwandi", "Dhule", "Kalyan-Dombivali", "Ichalkaranji", "Kalyan-Dombivali", "Karjat", "Latur", "Loha", "Lonar", "Lonavla", "Mahad", "Malegaon", "Malkapur", "Mangalvedhe", "Mangrulpir", "Manjlegaon", "Manmad", "Manwath", "Mehkar", "Mhaswad", "Mira-Bhayandar", "Morshi", "Mukhed", "Mul", "Greater Mumbai*", "Murtijapur", "Nagpur", "Nanded-Waghala", "Nandgaon", "Nandura", "Nandurbar", "Narkhed", "Nashik", "Navi Mumbai", "Nawapur", "Nilanga", "Osmanabad", "Ozar", "Pachora", "Paithan", "Palghar", "Pandharkaoda", "Pandharpur", "Panvel", "Parbhani", "Parli", "Partur", "Pathardi", "Pathri", "Patur", "Pauni", "Pen", "Phaltan", "Pulgaon", "Pune", "Purna", "Pusad", "Rahuri", "Rajura", "Ramtek", "Ratnagiri", "Raver", "Risod", "Sailu", "Sangamner", "Sangli", "Sangole", "Sasvad", "Satana", "Satara", "Savner", "Sawantwadi", "Shahade", "Shegaon", "Shendurjana", "Shirdi", "Shirpur-Warwade", "Shirur", "Shrigonda", "Shrirampur", "Sillod", "Sinnar", "Solapur", "Soyagaon", "Talegaon Dabhade", "Talode", "Tasgaon", "Thane", "Tirora", "Tuljapur", "Tumsar", "Uchgaon", "Udgir", "Umarga", "Umarkhed", "Umred", "Uran", "Uran Islampur", "Vadgaon Kasba", "Vaijapur", "Vasai-Virar", "Vita", "Wadgaon Road", "Wai", "Wani", "Wardha", "Warora", "Warud", "Washim", "Yavatmal", "Yawal", "Yevla"];
+$cities = ["Ntulili", "Kibiru", "Lachathuriu", "Kuani", "Matiru", "Kandebene",	"Mweronkanga", 
+"Limbine", "MAANTHI", "Karii", "Mwili", "Kaliati", "Ntiba", "Kitheo", "Mucuune", "Twale",
+"Kiorimba", "Machegene", "Kieru", "Kibuline", "Kimirii", "Mbeu",
+"Kunene", "Limauru", "Kilenchune", "Ntombo", "Kamaroo", "Amwari",
+"Kiandiu", "Ithamare", "Miathene", "Kianjai", "Mutionjuri", "Machaku", "Nairiri", 
+"Mituntu", "Kalithiria", "Urru", "Thau", "Muthiru", "Lairangi", "Mumui", "Rei"];
 
 ?>
+<style>
+    
+         body {
+            background-image: url("images/My project-1.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+         
+      </style>
 
-<h2 class="text-center" style="margin-top: 20px">Home Services</h2>
+   </head>
+<h2 class="text-center" style="margin-top: 20px"><font color="blue">Home  Services</font color></h2>
 <hr>
 <div class="container" style="margin-top:20px; margin-bottom: 60px;">
 
 
     <div class="row">
-        <div class="form-group col-5">
-            <label for="">City</label>
+        <div class="form-group col-2">
+            <label for=""><font color="black">City</font color></label>
             <select class="form-control" name="city" id="city">
-                <option value="none">-- Select City --</option>
+                <option value="none"><font color="black">-- Select City --</font color></option>
                 <?php foreach ($cities as $city) : ?>
                 <option value="<?= $city ?>"> <?= $city ?>
                 </option>
@@ -22,20 +37,24 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
             </select>
         </div>
 
-        <div class="form-group col-5">
-            <label for="">Profession Required</label>
+        <div class="form-group col-2">
+            <label for=""><font color="black">Profession Required</font color></label>
             <select class="form-control" name="profession" id="profession">
-                <option value="none">Select Profession</option>
+                <option value="none">--Select Profession--</option>
                 <option value="electrician">Electrician</option>
-                <option value="mobile">Carpentry</option>
-                <option value="plumber">Plumber</option>
-                <option value="mobile">Repairer</option>
-                <option value="mobile">Laundry</option>
+                        <option value="plumber">Plumber</option>
+                        <option value="handymanservices">Handyman Services</option>
+                        <option value="housecleaning">House Cleaner</option>
+                        <option value="gardenservices">Garden Services</option>
+                        <option value="interiordecorator">Interior Decorator</option>
+                          <option value="homeinspectionservices">Home Inspection Services</option>
+                          <option value="personalorganizer">Personal Organizer</option>
+                          <option value="personaldriver">Personal Driver</option>
             </select>
         </div>
 
         <div class="form-group col-2">
-            <label for="">Action</label>
+            <label for=""><font color="black">Action</font color></label>
             <button id="search" class="form-control btn btn-success" type="button">Search</button>
         </div>
     </div>
@@ -46,16 +65,16 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
 
             <thead background-image: url('example_img_girl.jpg');>
                 <tr>
-                    <th>Photo</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Profession</th>
-                    <th>Action</th>
+                    <th><font color="black">Photo</font color></th>
+                    <th><font color="black">Name</font color></th>
+                    <th><font color="black">Address</font color></th>
+                    <th><font color="black">Profession</font color></th>
+                    <th><font color="black">Action</font color></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan='5'>Select city and profession..</td>
+                    <td colspan='2'><font color="black">Select city and profession..</font color></td>
                 </tr>
             </tbody>
         </table>
@@ -71,7 +90,7 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
 
             if (city == "none" || profession == "none") {
                 alert("Don't leave fields empty!");
-                tbody = "<tr><td colspan='5'>please </td></tr>";
+                tbody = "<tr><td colspan='2'>please </td></tr>";
             } else {
                 $.post('scripts/searchproviders.php', {
                     city: city,
@@ -81,7 +100,7 @@ $cities = ["Ahmednagar", "Akola", "Akot", "Amalner", "Ambejogai", "Amravati", "A
                     var tbody = "";
 
                     if (providers.failed == true) {
-                        tbody = "<tr><td colspan='5'>No Service Providers found...</td></tr>";
+                        tbody = "<tr><td colspan='2'>No Service Providers found...</td></tr>";
                     } else {
                         providers.forEach(function(provider, i) {
                             tbody += "<tr>" +

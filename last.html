@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link
+	rel="stylesheet"
+	href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	/>
+	<link
+	rel="stylesheet"
+	href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	/>
+	<link rel="stylesheet" href="style.css" />
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<title>Google Map In PHP</title>
+</head>
+<body clas="bg-info">
+	<nav class="navbar navbar-default" style="background-color: white">
+		<div class="container-fluid">
+			<a href="#" class="h1"><font color="white">CONNECTION IS EVERYTHING</font color></h1></a>
+			<a class="nav-brand" href="signout.php"><font color="white">Log Out</font color></a>
+		</div>
+		
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well" style="background-color: white">
+		
+		<hr style="border-top:1px dotted white;"/>
+		<button class="btn btn-primary" id="get_map"><span class="glyphicon glyphicon-location"></span> Load Map</button>
+		<div id="map" style="height:500px; display:none;"></div>
+	</div>
+	<section id="last">
+	<!-- heading -->
+	<div class="full">
+		
+		<h3><strong><font color="blue">Get in </font color><font color="red">touch</font color></strong></h3>
+
+		<div class="lt">
+
+		<!-- form starting -->
+		<form class="form-horizontal"
+				method="post" action="contact.php">
+			<div class="form-group">
+			<div class="col-sm-12">
+				<!-- name -->
+				<input
+				type="text"
+				class="form-control"
+				id="name"
+				placeholder="NAME"
+				name="name"
+				value=""
+				/>
+			</div>
+			</div>
+
+			<div class="form-group">
+			<div class="col-sm-12">
+				<!-- email -->
+				<input
+				type="email"
+				class="form-control"
+				id="email"
+				placeholder="EMAIL"
+				name="email"
+				value=""
+				/>
+			</div>
+			</div>
+
+			<!-- message -->
+			<textarea
+			class="form-control"
+			rows="10"
+			placeholder="MESSAGE"
+			name="message">
+			</textarea>
+
+			<button
+			class="btn btn-primary send-button"
+			id="submit"
+			type="submit"
+			value="SEND">
+			<i class="fa fa-paper-plane"></i>
+			<span class="send-text">SEND</span>
+			</button>
+		</form>
+		<!-- end of form -->
+		</div>
+<footer>
+		<!-- Contact information -->
+		<div class="rt">
+		<ul class="contact-list">
+			<li class="list-item">
+			<i class="fa fa-map-marker fa-1x">
+				<span class="contact-text place">
+					Tigania West Sub County Headquarters<br>
+
+					Tigania West NG-CDF<br>
+					
+					3km Off Meru Maua Road at Kirindine
+					
+					
+				</span>
+			</i>
+			</li>
+			<li class="list-item">
+				<i class="fa fa-calendar fa-1x">
+					<span class="contact-text address">
+					Monday - Sunday: 8 am to 5 pm.
+					</span>
+				</i>
+				</li>
+
+			<li class="list-item">
+				<i class="fa fa-envelope fa-1x">
+					<span class="contact-text address">
+						P.O. Box 150-60602, Kianjai
+					</span>
+				</i>
+				</li>
+			
+
+			<li class="list-item">
+			<i class="fa fa-envelope fa-1x">
+				<span class="contact-text gmail">
+				<a href="walwendawinnie@gmail.com" title="Send me an email">
+					walwendawinnie@gmail.com</a>
+				</span>
+			</i>
+			</li>
+
+			<li class="list-item">
+			<i class="fa fa-phone fa-1x">
+				<span class="contact-text phone">
+				(+254) 790080281
+				</span>
+			</i>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</section>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-AB-9XZd-iQby-bNLYPFyb0pR2Qw3orw&callback=initMap" async defer></script>	
+	<script>
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 9.5162, lng: 123.158},
+				zoom: 8
+			});
+		}
+	</script>
+	<script src="js/script.js"></script>
+	<footer 
+	style="border-top: 1px solid #333;width: 100%; position: fixed; bottom: 0px;text-align: center;height: 40px; line-height: 40px; background: white; ">
+<font color="black"><strong> Home Based Service Provider &copy; <?= date("Y") ?></strong>
+	</footer>
+</body>
+</html>
+

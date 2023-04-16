@@ -6,6 +6,8 @@
 	}
 	else{
 ?>
+
+
 <html>
 	<head>
         <meta charset="utf-8">
@@ -29,6 +31,10 @@
             body{
 			font-family: "gotham-pro";
 			direction: ltr;
+
+            background-image: url("images/chat-bot-robot-online-chatting-260nw-1155561181 (1).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
             }
             .user{
             margin-top:70px; 

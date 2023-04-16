@@ -106,8 +106,9 @@ include_once "msg/booking.php";
                 <div class="form-group">
                     <label for="">Payment Mode</label>
                     <select class="form-control" name="payment" id="payment" required>
-                        <option value="cash">Cash</option>
-                        <option value="card">Debit Card</option>
+                        <option value="mastercard">MasterCard</option>
+                        
+                        
                     </select>
                 </div>
 

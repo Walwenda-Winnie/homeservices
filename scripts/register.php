@@ -14,9 +14,9 @@ if (isset($_POST['register'])) {
     $adder2 = $input['adder2'];
     $city = $input['city'];
     $password = $input['password'];
+ $photo = $_FILES['photo'];
     $profession = $input['profession'];
 
-    $photo = $_FILES['photo'];
 
     $file1 = upload($photo);
 

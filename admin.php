@@ -2,6 +2,7 @@
     include_once "scripts/checklogin.php";
     include_once "scripts/DB.php";
     include_once "./include/header.php";
+    
 
     if (!check("admin")) {
         header('Location: signout.php');
@@ -12,9 +13,21 @@
 
     $bookings = DB::query($sql)->fetchAll(PDO::FETCH_OBJ);
 
+    
+
 
     include_once "msg/admin.php";
 ?>
+
+<style>
+         body {
+            background-image: url("images/pexels-photo-1129413.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+         
+      </style>
+
 <div class="container" style="margin-top: 30px; margin-bottom: 60px;">
     <h2 class="text-center"> Bookings </h2>
     <div class="table-responsive">
@@ -63,3 +76,4 @@
 </div>
 
 <?php include_once "include/footer.php";
+?>
